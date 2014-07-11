@@ -13030,6 +13030,7 @@ Power package, 2 SMD pins</description>
 <part name="JP2" library="pinhead-1" deviceset="PINHD-1X4" device="_2.54-SMD-90°"/>
 <part name="P+12" library="supply1" deviceset="VCC" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
+<part name="C6" library="rcl" deviceset="C-EU" device="C0603"/>
 </parts>
 <sheets>
 <sheet>
@@ -13146,6 +13147,7 @@ Power package, 2 SMD pins</description>
 <instance part="JP2" gate="A" x="48.26" y="-124.46" rot="R180"/>
 <instance part="P+12" gate="VCC" x="198.12" y="-5.08"/>
 <instance part="GND5" gate="1" x="58.42" y="-132.08"/>
+<instance part="C6" gate="G$1" x="220.98" y="-43.18"/>
 </instances>
 <busses>
 </busses>
