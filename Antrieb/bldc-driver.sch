@@ -305,6 +305,15 @@ package type OT</description>
 <text x="-0.1001" y="0" size="0.02" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.508" y1="-0.762" x2="0.508" y2="0.762" layer="51"/>
 </package>
+<package name="JUMPER_0803">
+<wire x1="0.616" y1="0.127" x2="0.616" y2="-0.127" width="0.75" layer="51" curve="-180" cap="flat"/>
+<wire x1="-0.616" y1="-0.127" x2="-0.616" y2="0.127" width="0.75" layer="51" curve="-180" cap="flat"/>
+<smd name="1" x="-1.124" y="0" dx="1" dy="1" layer="1"/>
+<smd name="2" x="0" y="0" dx="0.8" dy="1" layer="1"/>
+<smd name="3" x="1.124" y="0" dx="1" dy="1" layer="1"/>
+<text x="-2.413" y="1.27" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<rectangle x1="-0.4" y1="-0.5" x2="0.4" y2="0.5" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ATMEGA32M1">
@@ -511,6 +520,16 @@ package type OT</description>
 </technologies>
 </device>
 <device name="1206" package="JUMPER_1206">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0803" package="JUMPER_0803">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -1717,8 +1736,8 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
 <wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
 <wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
-<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<smd name="1" x="-0.9" y="0" dx="0.9" dy="1.1" layer="1"/>
+<smd name="2" x="0.9" y="0" dx="0.9" dy="1.1" layer="1"/>
 <text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
 <text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
@@ -4562,8 +4581,8 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
 <wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
 <wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
-<smd name="1" x="-0.85" y="0" dx="1" dy="1.1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1" dy="1.1" layer="1"/>
+<smd name="1" x="-0.9" y="0" dx="0.9" dy="1.1" layer="1"/>
+<smd name="2" x="0.9" y="0" dx="0.9" dy="1.1" layer="1"/>
 <text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
 <text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="0.4318" y1="-0.4318" x2="0.8382" y2="0.4318" layer="51"/>
@@ -4578,8 +4597,8 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <wire x1="1.973" y1="0.983" x2="1.973" y2="-0.983" width="0.0508" layer="39"/>
 <wire x1="1.973" y1="-0.983" x2="-1.973" y2="-0.983" width="0.0508" layer="39"/>
 <wire x1="-1.973" y1="-0.983" x2="-1.973" y2="0.983" width="0.0508" layer="39"/>
-<smd name="1" x="-0.95" y="0" dx="1.3" dy="1.5" layer="1"/>
-<smd name="2" x="0.95" y="0" dx="1.3" dy="1.5" layer="1"/>
+<smd name="1" x="-1.1" y="0" dx="1" dy="1.5" layer="1"/>
+<smd name="2" x="1.1" y="0" dx="1" dy="1.5" layer="1"/>
 <text x="-0.635" y="1.27" size="1.27" layer="25">&gt;NAME</text>
 <text x="-0.635" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="0.4064" y1="-0.6985" x2="1.0564" y2="0.7015" layer="51"/>
@@ -12994,22 +13013,23 @@ Power package, 2 SMD pins</description>
 <part name="R_BEMFUH" library="rcl" deviceset="R-EU_" device="R0603" value="115k"/>
 <part name="R_BEMFUL" library="rcl" deviceset="R-EU_" device="R0603" value="44k"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
-<part name="C_BEMFU1" library="rcl" deviceset="C-EU" device="C0603" value="100pF"/>
-<part name="R_BEMFUH1" library="rcl" deviceset="R-EU_" device="R0603" value="115k"/>
-<part name="R_BEMFUL1" library="rcl" deviceset="R-EU_" device="R0603" value="44k"/>
+<part name="C_BEMFV" library="rcl" deviceset="C-EU" device="C0603" value="100pF"/>
+<part name="R_BEMFVH" library="rcl" deviceset="R-EU_" device="R0603" value="115k"/>
+<part name="R_BEMFVL" library="rcl" deviceset="R-EU_" device="R0603" value="44k"/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
-<part name="C_BEMFU2" library="rcl" deviceset="C-EU" device="C0603" value="100pF"/>
-<part name="R_BEMFUH2" library="rcl" deviceset="R-EU_" device="R0603" value="115k"/>
-<part name="R_BEMFUL2" library="rcl" deviceset="R-EU_" device="R0603" value="44k"/>
-<part name="JU" library="mox_IC" deviceset="JUMPER" device="0603"/>
-<part name="JV" library="mox_IC" deviceset="JUMPER" device="0603"/>
-<part name="JW" library="mox_IC" deviceset="JUMPER" device="0603"/>
+<part name="C_BEMFW" library="rcl" deviceset="C-EU" device="C0603" value="100pF"/>
+<part name="R_BEMFWH" library="rcl" deviceset="R-EU_" device="R0603" value="115k"/>
+<part name="R_BEMFWL" library="rcl" deviceset="R-EU_" device="R0603" value="44k"/>
+<part name="JU" library="mox_IC" deviceset="JUMPER" device="0803" value="JUMPER0803"/>
+<part name="JV" library="mox_IC" deviceset="JUMPER" device="0803" value="JUMPER0803"/>
+<part name="JW" library="mox_IC" deviceset="JUMPER" device="0803" value="JUMPER0803"/>
 <part name="AGND5" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND6" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND7" library="supply1" deviceset="AGND" device=""/>
-<part name="C6" library="rcl" deviceset="C-EU" device="C0603"/>
 <part name="JP1" library="pinhead-1" deviceset="PINHD-1X4" device="_2.54-SMD-90°"/>
 <part name="JP2" library="pinhead-1" deviceset="PINHD-1X4" device="_2.54-SMD-90°"/>
+<part name="P+12" library="supply1" deviceset="VCC" device=""/>
+<part name="GND5" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13109,22 +13129,23 @@ Power package, 2 SMD pins</description>
 <instance part="R_BEMFUH" gate="G$1" x="-5.08" y="-106.68"/>
 <instance part="R_BEMFUL" gate="G$1" x="0" y="-111.76" rot="R270"/>
 <instance part="GND14" gate="1" x="7.62" y="-137.16"/>
-<instance part="C_BEMFU1" gate="G$1" x="7.62" y="-127"/>
-<instance part="R_BEMFUH1" gate="G$1" x="-5.08" y="-124.46"/>
-<instance part="R_BEMFUL1" gate="G$1" x="0" y="-129.54" rot="R270"/>
+<instance part="C_BEMFV" gate="G$1" x="7.62" y="-127"/>
+<instance part="R_BEMFVH" gate="G$1" x="-5.08" y="-124.46"/>
+<instance part="R_BEMFVL" gate="G$1" x="0" y="-129.54" rot="R270"/>
 <instance part="GND15" gate="1" x="7.62" y="-154.94"/>
-<instance part="C_BEMFU2" gate="G$1" x="7.62" y="-144.78"/>
-<instance part="R_BEMFUH2" gate="G$1" x="-5.08" y="-142.24"/>
-<instance part="R_BEMFUL2" gate="G$1" x="0" y="-147.32" rot="R270"/>
+<instance part="C_BEMFW" gate="G$1" x="7.62" y="-144.78"/>
+<instance part="R_BEMFWH" gate="G$1" x="-5.08" y="-142.24"/>
+<instance part="R_BEMFWL" gate="G$1" x="0" y="-147.32" rot="R270"/>
 <instance part="JU" gate="G$1" x="27.94" y="-106.68" rot="R90"/>
 <instance part="JV" gate="G$1" x="30.48" y="-124.46" rot="R90"/>
 <instance part="JW" gate="G$1" x="33.02" y="-142.24" rot="R90"/>
 <instance part="AGND5" gate="VR1" x="129.54" y="33.02"/>
 <instance part="AGND6" gate="VR1" x="129.54" y="0"/>
 <instance part="AGND7" gate="VR1" x="129.54" y="-33.02"/>
-<instance part="C6" gate="G$1" x="292.1" y="-10.16"/>
 <instance part="JP1" gate="A" x="213.36" y="-5.08"/>
-<instance part="JP2" gate="A" x="53.34" y="-124.46"/>
+<instance part="JP2" gate="A" x="48.26" y="-124.46" rot="R180"/>
+<instance part="P+12" gate="VCC" x="198.12" y="-5.08"/>
+<instance part="GND5" gate="1" x="58.42" y="-132.08"/>
 </instances>
 <busses>
 </busses>
@@ -13225,19 +13246,24 @@ Power package, 2 SMD pins</description>
 </segment>
 <segment>
 <pinref part="GND14" gate="1" pin="GND"/>
-<pinref part="C_BEMFU1" gate="G$1" pin="2"/>
+<pinref part="C_BEMFV" gate="G$1" pin="2"/>
 <wire x1="7.62" y1="-132.08" x2="7.62" y2="-134.62" width="0.1524" layer="91"/>
-<pinref part="R_BEMFUL1" gate="G$1" pin="2"/>
+<pinref part="R_BEMFVL" gate="G$1" pin="2"/>
 <wire x1="0" y1="-134.62" x2="7.62" y2="-134.62" width="0.1524" layer="91"/>
 <junction x="7.62" y="-134.62"/>
 </segment>
 <segment>
 <pinref part="GND15" gate="1" pin="GND"/>
-<pinref part="C_BEMFU2" gate="G$1" pin="2"/>
+<pinref part="C_BEMFW" gate="G$1" pin="2"/>
 <wire x1="7.62" y1="-149.86" x2="7.62" y2="-152.4" width="0.1524" layer="91"/>
-<pinref part="R_BEMFUL2" gate="G$1" pin="2"/>
+<pinref part="R_BEMFWL" gate="G$1" pin="2"/>
 <wire x1="0" y1="-152.4" x2="7.62" y2="-152.4" width="0.1524" layer="91"/>
 <junction x="7.62" y="-152.4"/>
+</segment>
+<segment>
+<pinref part="JP2" gate="A" pin="1"/>
+<wire x1="50.8" y1="-129.54" x2="58.42" y2="-129.54" width="0.1524" layer="91"/>
+<pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -13272,6 +13298,11 @@ Power package, 2 SMD pins</description>
 <pinref part="P+11" gate="VCC" pin="VCC"/>
 <junction x="134.62" y="-91.44"/>
 <pinref part="P+11" gate="VCC" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="A" pin="4"/>
+<wire x1="210.82" y1="-7.62" x2="198.12" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="P+12" gate="VCC" pin="VCC"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -13556,7 +13587,7 @@ Power package, 2 SMD pins</description>
 </segment>
 <segment>
 <label x="-15.24" y="-124.46" size="0.8128" layer="95" rot="R180" xref="yes"/>
-<pinref part="R_BEMFUH1" gate="G$1" pin="1"/>
+<pinref part="R_BEMFVH" gate="G$1" pin="1"/>
 <wire x1="-10.16" y1="-124.46" x2="-15.24" y2="-124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -13617,7 +13648,7 @@ Power package, 2 SMD pins</description>
 </segment>
 <segment>
 <label x="-15.24" y="-142.24" size="0.8128" layer="95" rot="R180" xref="yes"/>
-<pinref part="R_BEMFUH2" gate="G$1" pin="1"/>
+<pinref part="R_BEMFWH" gate="G$1" pin="1"/>
 <wire x1="-10.16" y1="-142.24" x2="-15.24" y2="-142.24" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -13824,9 +13855,9 @@ Power package, 2 SMD pins</description>
 </net>
 <net name="N$14" class="0">
 <segment>
-<pinref part="R_BEMFUH2" gate="G$1" pin="2"/>
-<pinref part="R_BEMFUL2" gate="G$1" pin="1"/>
-<pinref part="C_BEMFU2" gate="G$1" pin="1"/>
+<pinref part="R_BEMFWH" gate="G$1" pin="2"/>
+<pinref part="R_BEMFWL" gate="G$1" pin="1"/>
+<pinref part="C_BEMFW" gate="G$1" pin="1"/>
 <wire x1="0" y1="-142.24" x2="7.62" y2="-142.24" width="0.1524" layer="91"/>
 <junction x="0" y="-142.24"/>
 <pinref part="JW" gate="G$1" pin="1"/>
@@ -13836,11 +13867,11 @@ Power package, 2 SMD pins</description>
 </net>
 <net name="N$15" class="0">
 <segment>
-<pinref part="R_BEMFUH1" gate="G$1" pin="2"/>
-<pinref part="R_BEMFUL1" gate="G$1" pin="1"/>
+<pinref part="R_BEMFVH" gate="G$1" pin="2"/>
+<pinref part="R_BEMFVL" gate="G$1" pin="1"/>
 <wire x1="0" y1="-124.46" x2="7.62" y2="-124.46" width="0.1524" layer="91"/>
 <junction x="0" y="-124.46"/>
-<pinref part="C_BEMFU1" gate="G$1" pin="1"/>
+<pinref part="C_BEMFV" gate="G$1" pin="1"/>
 <pinref part="JV" gate="G$1" pin="1"/>
 <wire x1="7.62" y1="-124.46" x2="25.4" y2="-124.46" width="0.1524" layer="91"/>
 <junction x="7.62" y="-124.46"/>
@@ -13858,29 +13889,29 @@ Power package, 2 SMD pins</description>
 <junction x="7.62" y="-106.68"/>
 </segment>
 </net>
-<net name="N$28" class="0">
-<segment>
-<pinref part="JV" gate="G$1" pin="3"/>
-<wire x1="35.56" y1="-124.46" x2="50.8" y2="-124.46" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="A" pin="3"/>
-</segment>
-</net>
 <net name="N$29" class="0">
 <segment>
 <pinref part="JW" gate="G$1" pin="3"/>
 <wire x1="38.1" y1="-142.24" x2="48.26" y2="-142.24" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="A" pin="4"/>
-<wire x1="50.8" y1="-127" x2="48.26" y2="-127" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="-127" x2="48.26" y2="-142.24" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="2"/>
+<wire x1="48.26" y1="-127" x2="50.8" y2="-127" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$31" class="0">
 <segment>
 <pinref part="JU" gate="G$1" pin="3"/>
 <wire x1="33.02" y1="-106.68" x2="48.26" y2="-106.68" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="A" pin="2"/>
-<wire x1="50.8" y1="-121.92" x2="48.26" y2="-121.92" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="-121.92" x2="48.26" y2="-106.68" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="4"/>
+<wire x1="48.26" y1="-121.92" x2="50.8" y2="-121.92" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="JP2" gate="A" pin="3"/>
+<pinref part="JV" gate="G$1" pin="3"/>
+<wire x1="50.8" y1="-124.46" x2="35.56" y2="-124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
