@@ -12996,7 +12996,7 @@ Power package, 2 SMD pins</description>
 <part name="AGND2" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND3" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND4" library="supply1" deviceset="AGND" device=""/>
-<part name="SHUNT" library="rcl" deviceset="R-EU_" device="R0603"/>
+<part name="SHUNT" library="rcl" deviceset="R-EU_" device="R1206"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="R_SHUNT+" library="rcl" deviceset="R-EU_" device="R0603"/>
 <part name="R_SHUNT-" library="rcl" deviceset="R-EU_" device="R0603"/>
@@ -13031,6 +13031,8 @@ Power package, 2 SMD pins</description>
 <part name="P+12" library="supply1" deviceset="VCC" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="C6" library="rcl" deviceset="C-EU" device="C0603"/>
+<part name="XTAL1" library="crystal" deviceset="CRYSTAL" device="HC49UP" value="16MHz"/>
+<part name="C7" library="rcl" deviceset="C-EU" device="C1206"/>
 </parts>
 <sheets>
 <sheet>
@@ -13148,6 +13150,8 @@ Power package, 2 SMD pins</description>
 <instance part="P+12" gate="VCC" x="198.12" y="-5.08"/>
 <instance part="GND5" gate="1" x="58.42" y="-132.08"/>
 <instance part="C6" gate="G$1" x="220.98" y="-43.18"/>
+<instance part="XTAL1" gate="G$1" x="-50.8" y="-66.04" rot="R90"/>
+<instance part="C7" gate="G$1" x="2.54" y="73.66"/>
 </instances>
 <busses>
 </busses>
@@ -13374,12 +13378,6 @@ Power package, 2 SMD pins</description>
 <pinref part="JP4" gate="A" pin="1"/>
 <wire x1="-43.18" y1="81.28" x2="-55.88" y2="81.28" width="0.1524" layer="91"/>
 <label x="-55.88" y="81.28" size="0.8128" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="N$13" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PB5(ADC6/INT2/ACMPN1/AMP2-/PCINT5)@26"/>
-<wire x1="50.8" y1="-22.86" x2="58.42" y2="-22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DAC_OUT" class="0">
@@ -13797,6 +13795,7 @@ Power package, 2 SMD pins</description>
 <segment>
 <pinref part="U1" gate="G$1" pin="PB4(AMP0+/PCINT4)@24"/>
 <wire x1="50.8" y1="-10.16" x2="58.42" y2="-10.16" width="0.1524" layer="91"/>
+<label x="58.42" y="-10.16" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="V_SHUNT-" class="0">
@@ -13808,6 +13807,7 @@ Power package, 2 SMD pins</description>
 <segment>
 <pinref part="U1" gate="G$1" pin="PB3(AMP0-/PCINT3)@23"/>
 <wire x1="50.8" y1="-7.62" x2="58.42" y2="-7.62" width="0.1524" layer="91"/>
+<label x="58.42" y="-7.62" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$7" class="0">
