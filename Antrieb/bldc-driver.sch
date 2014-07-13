@@ -14536,7 +14536,7 @@ Source: www.kingbright.com</description>
 <part name="P+12" library="supply1" deviceset="VCC" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="R1" library="rcl" deviceset="R-EU_" device="R0603"/>
-<part name="LED1" library="led" deviceset="LED" device="CHIP-LED0603"/>
+<part name="LED1" library="led" deviceset="LED" device="CHIPLED_0603"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
