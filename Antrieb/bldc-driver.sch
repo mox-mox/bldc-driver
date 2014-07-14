@@ -14538,6 +14538,9 @@ Source: www.kingbright.com</description>
 <part name="R1" library="rcl" deviceset="R-EU_" device="R0603"/>
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0603"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
+<part name="R3" library="rcl" deviceset="R-EU_" device="R0603"/>
+<part name="LED2" library="led" deviceset="LED" device="CHIPLED_0603"/>
+<part name="GND9" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14659,9 +14662,12 @@ u_max3=5/10; i_max10=u_max3/r</text>
 <instance part="JP2" gate="A" x="48.26" y="-124.46" rot="R180"/>
 <instance part="P+12" gate="VCC" x="198.12" y="-5.08"/>
 <instance part="GND5" gate="1" x="58.42" y="-132.08"/>
-<instance part="R1" gate="G$1" x="157.48" y="-111.76" rot="R90"/>
-<instance part="LED1" gate="G$1" x="157.48" y="-101.6"/>
-<instance part="GND7" gate="1" x="157.48" y="-119.38"/>
+<instance part="R1" gate="G$1" x="154.94" y="-104.14" rot="R90"/>
+<instance part="LED1" gate="G$1" x="154.94" y="-111.76"/>
+<instance part="GND7" gate="1" x="154.94" y="-119.38"/>
+<instance part="R3" gate="G$1" x="81.28" y="-27.94" rot="R90"/>
+<instance part="LED2" gate="G$1" x="81.28" y="-35.56"/>
+<instance part="GND9" gate="1" x="81.28" y="-43.18"/>
 </instances>
 <busses>
 </busses>
@@ -14782,8 +14788,12 @@ u_max3=5/10; i_max10=u_max3/r</text>
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="LED1" gate="G$1" pin="C"/>
 <pinref part="GND7" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="LED2" gate="G$1" pin="C"/>
+<pinref part="GND9" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -14878,11 +14888,11 @@ u_max3=5/10; i_max10=u_max3/r</text>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="OUT@1"/>
-<wire x1="147.32" y1="-99.06" x2="157.48" y2="-99.06" width="0.1524" layer="91"/>
 <label x="165.354" y="-99.06" size="0.8128" layer="95" rot="R180" xref="yes"/>
-<pinref part="LED1" gate="G$1" pin="A"/>
-<wire x1="157.48" y1="-99.06" x2="160.02" y2="-99.06" width="0.1524" layer="91"/>
-<junction x="157.48" y="-99.06"/>
+<wire x1="160.02" y1="-99.06" x2="154.94" y2="-99.06" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="154.94" y1="-99.06" x2="147.32" y2="-99.06" width="0.1524" layer="91"/>
+<junction x="154.94" y="-99.06"/>
 </segment>
 </net>
 <net name="SS" class="0">
@@ -15338,9 +15348,9 @@ u_max3=5/10; i_max10=u_max3/r</text>
 </net>
 <net name="FEEDBACK_U" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PD7(ACMP0/PCINT23)@15"/>
-<wire x1="50.8" y1="-30.48" x2="53.34" y2="-30.48" width="0.1524" layer="91"/>
-<label x="53.34" y="-30.48" size="0.8128" layer="95" xref="yes"/>
+<label x="53.34" y="-35.56" size="0.8128" layer="95" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="PD5(ADC2/ACMP2/PCINT21)@13"/>
+<wire x1="53.34" y1="-35.56" x2="50.8" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JU" gate="G$1" pin="2"/>
@@ -15350,9 +15360,9 @@ u_max3=5/10; i_max10=u_max3/r</text>
 </net>
 <net name="FEEDBACK_V" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PC6(ADC10/ACMP1/PCINT14)@22"/>
-<wire x1="50.8" y1="-33.02" x2="53.34" y2="-33.02" width="0.1524" layer="91"/>
-<label x="53.34" y="-33.02" size="0.8128" layer="95" xref="yes"/>
+<label x="53.34" y="-30.48" size="0.8128" layer="95" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="PD7(ACMP0/PCINT23)@15"/>
+<wire x1="53.34" y1="-30.48" x2="50.8" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JV" gate="G$1" pin="2"/>
@@ -15362,9 +15372,9 @@ u_max3=5/10; i_max10=u_max3/r</text>
 </net>
 <net name="FEEDBACK_W" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PD5(ADC2/ACMP2/PCINT21)@13"/>
-<wire x1="50.8" y1="-35.56" x2="53.34" y2="-35.56" width="0.1524" layer="91"/>
-<label x="53.34" y="-35.56" size="0.8128" layer="95" xref="yes"/>
+<label x="53.34" y="-33.02" size="0.8128" layer="95" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="PC6(ADC10/ACMP1/PCINT14)@22"/>
+<wire x1="53.34" y1="-33.02" x2="50.8" y2="-33.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JW" gate="G$1" pin="2"/>
@@ -15435,8 +15445,14 @@ u_max3=5/10; i_max10=u_max3/r</text>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="LED1" gate="G$1" pin="C"/>
-<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="LED1" gate="G$1" pin="A"/>
+</segment>
+</net>
+<net name="N$24" class="0">
+<segment>
+<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="LED2" gate="G$1" pin="A"/>
 </segment>
 </net>
 </nets>
