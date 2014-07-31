@@ -11648,7 +11648,6 @@ www.irf.com&lt;p&gt;
 <part name="AGND2" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND3" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND4" library="supply1" deviceset="AGND" device=""/>
-<part name="SHUNT" library="rcl" deviceset="R-EU_" device="R2512" value="0.024R, 1W"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="R_SHUNT+" library="rcl" deviceset="R-EU_" device="R0402"/>
 <part name="U2" library="mox_IC" deviceset="LMV7219" device="SOT23-5L"/>
@@ -11661,7 +11660,7 @@ www.irf.com&lt;p&gt;
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="C_BEMFU" library="rcl" deviceset="C-EU" device="C0402" value="100pF"/>
-<part name="R_BEMFUH" library="rcl" deviceset="R-EU_" device="R0603" value="115k"/>
+<part name="R_BEMFUH" library="rcl" deviceset="R-EU_" device="R0402" value="115k"/>
 <part name="R_BEMFUL" library="rcl" deviceset="R-EU_" device="R0402" value="44k"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="C_BEMFV" library="rcl" deviceset="C-EU" device="C0402" value="100pF"/>
@@ -11700,6 +11699,7 @@ www.irf.com&lt;p&gt;
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
 <part name="Q1" library="crystal" deviceset="FA-" device="XT_224_YIC"/>
 <part name="R_HALL_SHUNT" library="rcl" deviceset="R-EU_" device="R0402"/>
+<part name="SHUNT1" library="rcl" deviceset="R-EU_" device="R2512" value="0.024R, 1W"/>
 </parts>
 <sheets>
 <sheet>
@@ -11781,7 +11781,6 @@ u_max3=5/10; i_max10=u_max3/r</text>
 <instance part="AGND2" gate="VR1" x="172.72" y="-7.62"/>
 <instance part="AGND3" gate="VR1" x="172.72" y="-40.64"/>
 <instance part="AGND4" gate="VR1" x="114.3" y="-71.12"/>
-<instance part="SHUNT" gate="G$1" x="129.54" y="-73.66" rot="R90"/>
 <instance part="GND6" gate="1" x="129.54" y="-81.28"/>
 <instance part="R_SHUNT+" gate="G$1" x="134.62" y="-68.58"/>
 <instance part="U2" gate="G$1" x="134.62" y="-99.06"/>
@@ -11833,6 +11832,7 @@ u_max3=5/10; i_max10=u_max3/r</text>
 <instance part="GND21" gate="1" x="66.04" y="-10.16"/>
 <instance part="Q1" gate="G$1" x="-50.8" y="-45.72" rot="R270"/>
 <instance part="R_HALL_SHUNT" gate="G$1" x="264.16" y="2.54" rot="R180"/>
+<instance part="SHUNT1" gate="G$1" x="129.54" y="-73.66" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -11907,11 +11907,11 @@ u_max3=5/10; i_max10=u_max3/r</text>
 <junction x="-2.54" y="71.12"/>
 </segment>
 <segment>
-<pinref part="SHUNT" gate="G$1" pin="1"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<junction x="129.54" y="-78.74"/>
 <label x="147.32" y="-78.74" size="0.8128" layer="95" rot="R180" xref="yes"/>
 <wire x1="147.32" y1="-78.74" x2="129.54" y2="-78.74" width="0.1524" layer="91"/>
+<pinref part="SHUNT1" gate="G$1" pin="2"/>
+<junction x="129.54" y="-78.74"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
@@ -12470,14 +12470,14 @@ u_max3=5/10; i_max10=u_max3/r</text>
 </segment>
 <segment>
 <pinref part="AGND4" gate="VR1" pin="AGND"/>
-<pinref part="SHUNT" gate="G$1" pin="2"/>
 <wire x1="114.3" y1="-68.58" x2="124.46" y2="-68.58" width="0.1524" layer="91"/>
 <pinref part="R_SHUNT+" gate="G$1" pin="1"/>
-<junction x="129.54" y="-68.58"/>
 <pinref part="R13" gate="G$1" pin="2"/>
 <wire x1="124.46" y1="-68.58" x2="129.54" y2="-68.58" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="-86.36" x2="124.46" y2="-68.58" width="0.1524" layer="91"/>
 <junction x="124.46" y="-68.58"/>
+<pinref part="SHUNT1" gate="G$1" pin="1"/>
+<junction x="129.54" y="-68.58"/>
 </segment>
 <segment>
 <pinref part="DRIVERU" gate="G$1" pin="COM"/>
